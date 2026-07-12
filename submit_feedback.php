@@ -273,6 +273,12 @@ try {
         'id' => $pdo->lastInsertId()
     ]);
 } catch (PDOException $e) {
+    // Log the exact error to PHP system logs
+    error_log("Database query failed: " . $e->getMessage());
+    
+    // Log to temporary diagnostics file in htdocs for FTP verification
+    file_put_contents(__DIR__ . '/db_error.log', '[' . date('Y-m-d H:i:s') . '] Query error: ' . $e->getMessage() . PHP_EOL, FILE_APPEND);
+
     http_response_code(500);
     echo json_encode([
         'success' => false, 
