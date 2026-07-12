@@ -7,7 +7,7 @@
 define('DB_HOST', 'sql213.infinityfree.com');
 define('DB_USER', 'if0_42389824');
 define('DB_PASS', 'hDPlymG794cWZfu');
-define('DB_NAME', 'if0_42389824_XXX');
+define('DB_NAME', 'if0_42389824_demo321');
 
 // SMTP Configuration
 define('SMTP_HOST', 'smtp.hostinger.com');
