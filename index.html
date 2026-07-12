@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Share your experience with GoTek. We manufacture high-quality, professional ID cards and credentials. Your feedback helps us serve you better.">
+  <meta name="theme-color" content="#0B47E5">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>GoTek ID Cards — Customer Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Decorative Background Glows (fixed, full-page) -->
+  <div class="bg-glows" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+    <div class="glow glow-4"></div>
+    <div class="glow glow-5"></div>
+    <div class="glow glow-6"></div>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="section-hero">
+    <!-- Subtle Background Decorative Message Cards -->
+    <div class="hero-bg-card card-1" aria-hidden="true">
+      <div class="hero-bg-card-header">
+        <div class="hero-bg-card-avatar"></div>
+        <div class="hero-bg-card-title"></div>
+      </div>
+      <div class="hero-bg-card-body">
+        <div class="hero-bg-card-line"></div>
+        <div class="hero-bg-card-line short"></div>
+      </div>
+    </div>
+    <div class="hero-bg-card card-2" aria-hidden="true">
+      <div class="hero-bg-card-header">
+        <div class="hero-bg-card-avatar"></div>
+        <div class="hero-bg-card-title"></div>
+      </div>
+      <div class="hero-bg-card-body">
+        <div class="hero-bg-card-line"></div>
+        <div class="hero-bg-card-line short"></div>
+      </div>
+    </div>
+    <div class="hero-bg-card card-3" aria-hidden="true">
+      <div class="hero-bg-card-header">
+        <div class="hero-bg-card-avatar"></div>
+        <div class="hero-bg-card-title"></div>
+      </div>
+      <div class="hero-bg-card-body">
+        <div class="hero-bg-card-line"></div>
+        <div class="hero-bg-card-line short"></div>
+      </div>
+    </div>
+    <div class="hero-bg-card card-4" aria-hidden="true">
+      <div class="hero-bg-card-header">
+        <div class="hero-bg-card-avatar"></div>
+        <div class="hero-bg-card-title"></div>
+      </div>
+      <div class="hero-bg-card-body">
+        <div class="hero-bg-card-line"></div>
+        <div class="hero-bg-card-line short"></div>
+      </div>
+    </div>
+
+    <!-- Decorative floating circles (CSS pseudo-elements handle ::before/::after) -->
+    <div class="container hero-container">
+      <header class="header">
+        <!-- Logo — 2× size via .header .logo-img override -->
+        <div class="logo-container">
+          <img src="logo.png" alt="GoTek — Printing &amp; Gifting" class="logo-img">
+        </div>
+
+        <!-- Headline & sub copy -->
+        <h1>We Value Your<br>Feedback</h1>
+        <p class="subheading">
+          Your feedback helps us improve our products and services. Please share your experience with GoTek below.
+        </p>
+
+        <!-- Time meta tag -->
+        <div class="hero-meta">
+          <span class="meta-tag">⏱ Takes less than 2 minutes</span>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- ==================== FEEDBACK FORM SECTION ==================== -->
+  <section class="section-form">
+    <div class="container">
+      <form id="feedbackForm" class="feedback-card" novalidate>
+
+        <!-- Form Welcome Header -->
+        <div class="form-welcome-header">
+          <h2>Thank You for Choosing GoTek!</h2>
+          <p>We appreciate your trust. Please take a moment to share your feedback.</p>
+        </div>
+
+        <!-- 1. Full Name -->
+        <div class="form-group floating-group">
+          <input type="text" id="fullName" name="fullName" class="input-text" placeholder=" " required
+            autocomplete="name">
+          <label for="fullName" class="floating-label">1. Full Name</label>
+          <span class="focus-line"></span>
+        </div>
+
+        <!-- 2. Organization Type -->
+        <div class="form-group">
+          <label class="form-label">2. Organization Type</label>
+          <span class="form-label-desc">Please choose the option that best describes your workspace or
+            institution</span>
+
+          <input type="hidden" id="selectedOrg" name="organizationType" required>
+          <div class="org-grid" role="radiogroup" aria-label="Organization type selection">
+
+            <!-- Business -->
+            <div class="org-card" data-value="Business / Company" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="Business / Company">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-business">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">Business</span>
+                <span class="org-desc">Corporate offices &amp; companies</span>
+              </div>
+            </div>
+
+            <!-- College -->
+            <div class="org-card" data-value="College" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="College">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-college">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">College</span>
+                <span class="org-desc">Higher education &amp; universities</span>
+              </div>
+            </div>
+
+            <!-- School -->
+            <div class="org-card" data-value="School" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="School">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-school">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">School</span>
+                <span class="org-desc">Primary &amp; secondary schools</span>
+              </div>
+            </div>
+
+            <!-- Hospital -->
+            <div class="org-card" data-value="Hospital" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="Hospital">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-hospital">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 11v6m-3-3h6M5 20V10.5l7-4.5 7 4.5V20H5z" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">Hospital</span>
+                <span class="org-desc">Medical centres &amp; clinics</span>
+              </div>
+            </div>
+
+            <!-- Government -->
+            <div class="org-card" data-value="Government Office" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="Government Office">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-gov">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 22h16M4 18h16M4 6l8-4 8 4M6 18V6m4 12V6m4 12V6m4 12V6" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">Govt. Office</span>
+                <span class="org-desc">Public sector &amp; departments</span>
+              </div>
+            </div>
+
+            <!-- Industry / Factory -->
+            <div class="org-card" data-value="Industry / Factory" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="Industry / Factory">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-factory">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2 22h20V10l-6 4V10l-6 4V6L2 10v12z" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">Factory / Industry</span>
+                <span class="org-desc">Manufacturing &amp; production</span>
+              </div>
+            </div>
+
+            <!-- Retail -->
+            <div class="org-card" data-value="Retail Store" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="Retail Store">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-retail">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">Retail Store</span>
+                <span class="org-desc">Shops &amp; merchant outlets</span>
+              </div>
+            </div>
+
+            <!-- Other -->
+            <div class="org-card" data-value="Other" tabindex="0" role="radio" aria-checked="false">
+              <input type="radio" name="org_radio" value="Other">
+              <div class="org-card-checkbox">
+                <svg class="checkmark-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="org-icon-container icon-other">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M5 12h.01M12 12h.01M19 12h.01M5 12a1 1 0 110-2 1 1 0 010 2zm7 0a1 1 0 110-2 1 1 0 010 2zm7 0a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+              </div>
+              <div class="org-card-content">
+                <span class="org-name">Other</span>
+                <span class="org-desc">Any other organisation type</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Conditional Custom Organization Input -->
+          <div class="conditional-org" id="customOrgSection">
+            <div class="floating-group">
+              <input type="text" id="customOrgInput" name="customOrgInput" class="input-text" placeholder="Enter your organization name">
+              <label for="customOrgInput" class="floating-label">Please specify your organization</label>
+              <span class="focus-line"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Rate Your Experience -->
+        <div class="form-group rating-section">
+          <label class="form-label">3. Rate Your Experience</label>
+          <input type="hidden" id="selectedRating" name="rating" required>
+          <div class="stars-container" role="radiogroup" aria-label="Star Rating">
+            <svg class="star" data-rating="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              role="radio" aria-label="1 star" tabindex="0">
+              <path stroke-linejoin="round"
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="star" data-rating="2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              role="radio" aria-label="2 stars" tabindex="0">
+              <path stroke-linejoin="round"
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="star" data-rating="3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              role="radio" aria-label="3 stars" tabindex="0">
+              <path stroke-linejoin="round"
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="star" data-rating="4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              role="radio" aria-label="4 stars" tabindex="0">
+              <path stroke-linejoin="round"
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <svg class="star" data-rating="5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              role="radio" aria-label="5 stars" tabindex="0">
+              <path stroke-linejoin="round"
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div class="rating-help">Tap a star to rate your experience</div>
+        </div>
+
+        <!-- 4. Tell us about your experience -->
+        <div class="form-group">
+          <label class="form-label" for="feedbackText">4. Tell us about your experience</label>
+          <div class="textarea-container">
+            <textarea id="feedbackText" name="feedbackText" class="textarea-feedback" placeholder="Describe your experience in detail..." maxlength="1000"
+              required></textarea>
+            <span class="focus-line"></span>
+            <span class="char-counter" id="charCounter">0 / 1000</span>
+          </div>
+        </div>
+
+        <!-- 5. Would you recommend GoTek to others? -->
+        <div class="form-group">
+          <label class="form-label">5. Would you recommend GoTek to others?</label>
+          <div class="radio-group inline" role="radiogroup">
+            <label class="radio-option">
+              <input type="radio" name="recommend" value="Yes" required>
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="recommend" value="No">
+              <span class="radio-custom"></span>
+              <span class="radio-label">No</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Conditional Referral Details -->
+        <div class="form-group conditional-referral" id="referralSection">
+          <label class="form-label">Referral Details</label>
+          <div class="referral-fields-grid">
+            <div class="floating-group">
+              <input type="text" id="referralName" name="referralName" class="input-text" placeholder=" ">
+              <label for="referralName" class="floating-label">Referral Person's Name (Optional)</label>
+              <span class="focus-line"></span>
+            </div>
+            <div class="floating-group">
+              <input type="tel" id="referralContact" name="referralContact" class="input-text" placeholder=" ">
+              <label for="referralContact" class="floating-label">Referral Person's Number (Optional)</label>
+              <span class="focus-line"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-container">
+          <button type="submit" id="submitBtn" class="btn-submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span class="btn-text">Submit Feedback</span>
+          </button>
+          <p class="submit-disclaimer">
+            We read every review and use it to improve our products and services. Your privacy is protected.
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img src="logo.png" alt="GoTek Logo" class="logo-img">
+            <div class="footer-logo-sub">PRINTING &amp; GIFTING</div>
+          </div>
+          <p class="footer-desc">
+            Gotek provides custom ID cards, RFID solutions, corporate lanyards, and printing services for businesses.
+            Our in-house production ensures quality, affordability, and dependable service for every order.
+          </p>
+        </div>
+
+        <!-- Production Center -->
+        <div class="footer-col contact-col">
+          <div class="contact-header">
+            <span class="contact-tag">PRODUCTION CENTER</span>
+            <h4 class="contact-title">CORPORATE OFFICE CUM FACTORY</h4>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>O.No. 166/1, N.N. 317/1, Konnur High Road, Ayanavaram, Chennai – 600023. Landmark: Noor Hotel Bus
+                Stop.</span>
+            </li>
+            <li>
+              <svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <div>
+                <span>044 - 4216 0975</span><br>
+                <span>+91 9840330975</span>
+              </div>
+            </li>
+            <li>
+              <svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span><a href="mailto:Info@goldenid.com">Info@goldenid.com</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IT Solutions -->
+        <div class="footer-col link-col">
+          <h4 class="footer-col-title">IT SOLUTIONS</h4>
+          <ul class="footer-links">
+            <li><a href="#">ID Card &amp; Lanyard Cropping Tool</a></li>
+            <li><a href="#">Smart AI Campus (SAC)</a></li>
+            <li><a href="#">E-Commerce</a></li>
+          </ul>
+        </div>
+
+        <!-- Hardware -->
+        <div class="footer-col link-col">
+          <h4 class="footer-col-title">HARDWARE</h4>
+          <ul class="footer-links">
+            <li><a href="#">ID Cards</a></li>
+            <li><a href="#">RFID Cards</a></li>
+            <li><a href="#">NFC Cards</a></li>
+            <li><a href="#">Lanyards &amp; Tags</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 GoTek Printing &amp; Gifting. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Support</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notifications Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-label="Submission success">
+    <div class="modal-content">
+      <div class="success-icon-container">
+        <svg class="success-checkmark" viewBox="0 0 52 52">
+          <circle class="success-checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+          <path class="success-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+        </svg>
+      </div>
+      <h3 class="modal-title">Thank You!</h3>
+      <p class="modal-text">Your feedback has been submitted successfully.<br>We appreciate your valuable time.</p>
+      <button type="button" class="btn-close-modal" id="closeModalBtn">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
