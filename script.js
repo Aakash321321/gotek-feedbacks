@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Redirect condition:', Number(sessionStorage.getItem('lastFeedbackRating')) === 5);
       const storedRating = sessionStorage.getItem('lastFeedbackRating');
       if (storedRating && Number(storedRating) === 5) {
-        window.location.href = GOOGLE_REVIEWS_URL;
+        window.location.assign(GOOGLE_REVIEWS_URL);
       } else {
         successModal.classList.remove('active');
       }
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('[GoTek Redirect] Is 5-star condition true?', Number(storedRating) === 5);
         if (storedRating && Number(storedRating) === 5) {
           console.log('[GoTek Redirect] Redirect URL:', GOOGLE_REVIEWS_URL);
-          window.location.href = GOOGLE_REVIEWS_URL;
+          window.location.assign(GOOGLE_REVIEWS_URL);
         } else {
           console.log('[GoTek Redirect] Standard modal close...');
           successModal.classList.remove('active');

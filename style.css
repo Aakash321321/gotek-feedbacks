@@ -284,6 +284,7 @@ select {
   border-radius: 50%;
   filter: blur(120px);
   will-change: transform;
+  pointer-events: none;
 }
 
 .glow-1 {
@@ -930,6 +931,13 @@ select {
 /* ========================================
    STAR RATING
    ======================================== */
+.rating-section,
+.stars-container,
+.star-button,
+.star {
+    overflow: visible;
+}
+
 .rating-section {
   text-align: center;
   padding: var(--sp-6) 0 var(--sp-5);
@@ -937,36 +945,35 @@ select {
 }
 
 .stars-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 100%;
-  gap: clamp(4px, 2vw, 20px);
-  margin-bottom: var(--sp-3);
-  padding-inline: 4px;
-  box-sizing: border-box;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: clamp(5px, 2vw, 18px);
+    padding: 12px 8px;
+    box-sizing: border-box;
+    margin-bottom: var(--sp-3);
 }
 
 .star {
-  width: clamp(32px, 9.5vw, 80px);
-  height: clamp(32px, 9.5vw, 80px);
-  flex: 0 1 auto;
-  max-width: calc((100% - 16px) / 5);
-  cursor: pointer;
-  color: var(--star-empty);
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.2;
-  transition:
-    transform var(--t-base) var(--ease-spring),
-    color var(--t-fast) ease,
-    fill var(--t-fast) ease,
-    filter var(--t-base) ease;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
+    width: clamp(40px, 12vw, 74px);
+    height: clamp(40px, 12vw, 74px);
+    max-width: calc((100% - 24px) / 5);
+    transform-origin: center;
+    cursor: pointer;
+    color: var(--star-empty);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.2;
+    transition:
+      transform var(--t-base) var(--ease-spring),
+      color var(--t-fast) ease,
+      fill var(--t-fast) ease,
+      filter var(--t-base) ease;
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .star:focus,
@@ -975,11 +982,11 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .star:hover {
-    transform: scale(1.25) rotate(6deg);
-    color: var(--star-filled);
-    filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.4));
-  }
+    .star:hover {
+        transform: scale(1.05);
+        color: var(--star-filled);
+        filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.4));
+    }
 }
 
 .star.active {
@@ -991,6 +998,13 @@ select {
   .star.active:hover {
     filter: drop-shadow(0 4px 16px rgba(245, 158, 11, 0.55));
   }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .star:hover,
+    .star:active {
+        transform: none;
+    }
 }
 
 .star.star-pulse {
