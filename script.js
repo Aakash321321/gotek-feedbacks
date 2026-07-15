@@ -315,8 +315,12 @@ document.addEventListener('DOMContentLoaded', () => {
           scrollTarget = firstErrorEl.closest('.form-group');
         }
 
-        // Smoothly scroll and center the viewport on the first incomplete field
-        scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Smoothly scroll and center the viewport on the first incomplete field, respecting user motion preferences
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        scrollTarget.scrollIntoView({ 
+          behavior: prefersReducedMotion ? 'auto' : 'smooth', 
+          block: 'center' 
+        });
 
         // Set focus to the input/textarea element
         if (firstErrorEl.tagName === 'INPUT' || firstErrorEl.tagName === 'TEXTAREA') {
@@ -509,8 +513,15 @@ function triggerConfetti(parentEl) {
   const existingConfetti = parentEl.querySelectorAll('.confetti-piece');
   existingConfetti.forEach(c => c.remove());
 
+  // Disable confetti if user prefers reduced motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
   const colors = ['#0A50F5', '#D20A11', '#10B981', '#F59E0B', '#EC4899', '#8B5CF6'];
-  const confettiCount = 65;
+  // Reduce confetti count on mobile to 25 to prevent lag
+  const isMobile = window.innerWidth < 768;
+  const confettiCount = isMobile ? 25 : 65;
 
   for (let i = 0; i < confettiCount; i++) {
     const piece = document.createElement('div');
