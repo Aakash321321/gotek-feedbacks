@@ -4,10 +4,30 @@
  * Compatible with local environments (XAMPP/WAMP) and Hostinger.
  */
 
-define('DB_HOST', 'sql213.infinityfree.com');
-define('DB_USER', 'if0_42389824');
-define('DB_PASS', 'hDPlymG794cWZfu');
-define('DB_NAME', 'if0_42389824_demo321');
+// Dynamic Environment Detection
+$isLocalhost = (
+    isset($_SERVER['HTTP_HOST']) && 
+    (
+        $_SERVER['HTTP_HOST'] === 'localhost' || 
+        $_SERVER['HTTP_HOST'] === 'localhost:8000' || 
+        $_SERVER['HTTP_HOST'] === '127.0.0.1' || 
+        $_SERVER['HTTP_HOST'] === '127.0.0.1:8000'
+    )
+) || php_sapi_name() === 'cli';
+
+if ($isLocalhost) {
+    // Local XAMPP Environment
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+    define('DB_NAME', 'gotek_feedback');
+} else {
+    // Production InfinityFree Environment
+    define('DB_HOST', 'sql213.infinityfree.com');
+    define('DB_USER', 'if0_42389824');
+    define('DB_PASS', 'hDPlymG794cWZfu');
+    define('DB_NAME', 'if0_42389824_demo321');
+}
 
 // SMTP Configuration
 define('SMTP_HOST', 'smtp.hostinger.com');
